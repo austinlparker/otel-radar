@@ -1,0 +1,39 @@
+{
+  "id": 2,
+  "name": "Java",
+  "category": "developer",
+  "description": "Java is one of the most widely used and mature programming languages in the world for backend software. OpenTelemetry for Java is also incredibly mature, with a wide array of instrumentation libraries, strong support for tracing, metrics, and logs, and good documentation.",
+  "tier": 1,
+  "dimensions": [
+    {
+      "id": 1,
+      "name": "Developer Experience",
+      "description": "Java offers several extension methods that aid in building instrumentation code, and a fluent API that comports with common language idioms.",
+      "score": 0.8
+    },
+    {
+      "id": 2,
+      "name": "Instrumentation Libraries",
+      "description": "Java has some of the most comprehensive instrumentation ecosystems in OpenTelemetry.",
+      "score": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Documentation",
+      "description": "While there are some gaps, especially around integration with specific frameworks like Spring, there's solid documentation that's up to date and useful.",
+      "score": 0.8
+    },
+    {
+      "id": 4,
+      "name": "Signals",
+      "description": "Java fully supports traces, metrics, and logs. New signals often tend to stabilize in Java early due to it's popularity and broad developer community.",
+      "score": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Architectures",
+      "description": "OpenTelemetry comports well with all common Java deployment and architecture patterns (SOA, microservices, etc.)",
+      "score": 1.0
+    }
+  ]
+}

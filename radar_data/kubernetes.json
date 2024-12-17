@@ -1,0 +1,58 @@
+{
+  "id": 9,
+  "concept": "Kubernetes Integration",
+  "description": "Instrumenting Kubernetes environments to gather telemetry from clusters, nodes, pods, and services, providing insight into containerized workloads.",
+  "dimensions": [
+    {
+      "id": 901,
+      "facet": "Kubernetes Metrics Collection",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["kubernetes", "metrics", "infrastructure", "telemetry"],
+      "description": "Collects node and pod-level metrics like CPU, memory, and network usage from Kubernetes, widely adopted and well-documented."
+    },
+    {
+      "id": 902,
+      "facet": "Kubelet & API Server Tracing",
+      "maturity_score": 0.77,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.72,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.75
+      },
+      "tags": ["kubernetes", "traces", "cluster", "control-plane"],
+      "description": "Provides distributed tracing for Kubernetes control-plane components, aiding in diagnosing cluster performance issues."
+    },
+    {
+      "id": 903,
+      "facet": "Service Discovery & Context Propagation",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.78,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.8
+      },
+      "tags": ["kubernetes", "context", "service-discovery", "observability"],
+      "description": "Integrates with Kubernetes service discovery mechanisms to propagate trace context between services, providing coherent end-to-end visibility."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": 5,
+  "concept": "HTTP",
+  "description": "Instrumentation and telemetry for HTTP-based interactions, including servers, clients, and proxies.",
+  "dimensions": [
+    {
+      "id": 501,
+      "facet": "HTTP Server Instrumentation",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["http", "server", "instrumentation", "traces", "metrics"],
+      "description": "Captures request latency, response codes, and error rates for HTTP servers. Widely adopted and well-understood."
+    },
+    {
+      "id": 502,
+      "facet": "HTTP Client Instrumentation",
+      "maturity_score": 0.88,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["http", "client", "instrumentation", "traces"],
+      "description": "Provides telemetry for outbound HTTP calls, including request/response correlation and error tracking. Very common scenario."
+    },
+    {
+      "id": 503,
+      "facet": "Reverse Proxy / Gateway Instrumentation",
+      "maturity_score": 0.82,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.78,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.8
+      },
+      "tags": ["http", "proxy", "gateway", "observability"],
+      "description": "Telemetry for HTTP proxies and API gateways, aiding in understanding high-level request routing and performance bottlenecks."
+    }
+  ]
+}

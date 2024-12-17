@@ -1,0 +1,58 @@
+{
+  "id": 3,
+  "concept": "Service Mesh Integration",
+  "description": "Observability features integrated within service meshes, providing out-of-the-box telemetry for inter-service communication.",
+  "dimensions": [
+    {
+      "id": 301,
+      "facet": "Istio Telemetry Integration",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.9,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["istio", "service-mesh", "metrics", "traces"],
+      "description": "Leverages Istio’s built-in telemetry pipeline to produce consistent metrics and traces without requiring manual instrumentation."
+    },
+    {
+      "id": 302,
+      "facet": "Linkerd Integration",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["linkerd", "service-mesh", "telemetry"],
+      "description": "Provides automatic telemetry signals for services running under Linkerd, though with a slightly smaller user base than Istio."
+    },
+    {
+      "id": 303,
+      "facet": "Envoy Proxy Tracing Integration",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["envoy", "proxy", "traces", "mesh"],
+      "description": "Envoy’s native tracing filters provide deep visibility into service-to-service communication at the proxy level, widely adopted and well-supported."
+    }
+  ]
+}

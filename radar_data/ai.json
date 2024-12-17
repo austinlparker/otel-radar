@@ -1,0 +1,92 @@
+{
+  "id": 16,
+  "concept": "AI Observability",
+  "description": "Instrumentation, telemetry, and observability practices tailored to AI-powered features within applications. Covers monitoring of model-driven services, LLM-based interactions, and vector search operations.",
+  "dimensions": [
+    {
+      "id": 1601,
+      "facet": "LLM Prompt & Response Tracing",
+      "maturity_score": 0.6,
+      "maturity_score_details": {
+        "developer_experience_score": 0.55,
+        "documentation_score": 0.65,
+        "completeness_score": 0.6
+      },
+      "confidence_score": 0.55,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.5,
+        "sentiment_score": 0.6
+      },
+      "tags": ["ai", "llm", "prompts", "traces"],
+      "description": "Captures telemetry around requests to Large Language Models, including prompt latency, token usage, and request-response correlation. Emerging standards, but still new."
+    },
+    {
+      "id": 1602,
+      "facet": "Vector Database Query Metrics",
+      "maturity_score": 0.65,
+      "maturity_score_details": {
+        "developer_experience_score": 0.6,
+        "documentation_score": 0.7,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.6,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.65
+      },
+      "tags": ["ai", "vector-db", "similarity-search", "metrics"],
+      "description": "Tracks query latency, vector insertion rates, and recall/precision indicators from vector databases used for semantic search or recommendations."
+    },
+    {
+      "id": 1603,
+      "facet": "Feature Embedding Generation Observability",
+      "maturity_score": 0.58,
+      "maturity_score_details": {
+        "developer_experience_score": 0.55,
+        "documentation_score": 0.6,
+        "completeness_score": 0.6
+      },
+      "confidence_score": 0.5,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.45,
+        "sentiment_score": 0.55
+      },
+      "tags": ["ai", "embeddings", "metrics", "latency"],
+      "description": "Monitors the process of generating embeddings, including time taken, resource utilization (GPU/CPU), and error rates. Less standardized due to varied embedding pipelines."
+    },
+    {
+      "id": 1604,
+      "facet": "Model Drift & Quality Metrics",
+      "maturity_score": 0.55,
+      "maturity_score_details": {
+        "developer_experience_score": 0.5,
+        "documentation_score": 0.6,
+        "completeness_score": 0.55
+      },
+      "confidence_score": 0.5,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.45,
+        "sentiment_score": 0.55
+      },
+      "tags": ["ai", "model-drift", "quality", "metrics"],
+      "description": "Captures signals related to model degradation over time, changes in data distribution, and shifts in accuracy or latency. Still an emerging area in observability."
+    },
+    {
+      "id": 1605,
+      "facet": "Model Serving Infrastructure Tracing",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["ai", "model-serving", "traces", "infrastructure"],
+      "description": "Provides distributed tracing for model serving frameworks (e.g., BentoML, Seldon), correlating user requests with model inference times and resource usage."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 8,
+  "concept": "Logging Integration",
+  "description": "Capabilities and tools that integrate logging signals into the broader observability stack, correlating logs with traces and metrics.",
+  "dimensions": [
+    {
+      "id": 801,
+      "facet": "OTel Log SDK Integration",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["logging", "sdk", "traces", "metrics"],
+      "description": "Integrates application logs into OpenTelemetry’s data model. Emerging standard with developing ecosystem support."
+    },
+    {
+      "id": 802,
+      "facet": "Semantic Conventions for Logs",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["logging", "conventions", "standardization", "telemetry"],
+      "description": "Defines a common schema for logs, improving interoperability and making it easier to correlate logs with other signals."
+    }
+  ]
+}

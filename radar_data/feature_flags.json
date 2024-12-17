@@ -1,0 +1,41 @@
+{
+  "id": 20,
+  "concept": "Feature Flag & Progressive Delivery Observability",
+  "description": "Telemetry that measures the impact of feature flags and progressive rollouts on performance, error rates, and user experience, ensuring safe and controlled feature delivery.",
+  "dimensions": [
+    {
+      "id": 2001,
+      "facet": "Flag Impact Tracing",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.65,
+        "documentation_score": 0.75,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["feature-flags", "traces", "progressive-delivery"],
+      "description": "Correlates specific feature flags with changes in request latency, errors, and user engagement, helping teams validate new features or rollback quickly."
+    },
+    {
+      "id": 2002,
+      "facet": "Rollout Metrics & Evaluation",
+      "maturity_score": 0.68,
+      "maturity_score_details": {
+        "developer_experience_score": 0.65,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.62,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.65
+      },
+      "tags": ["feature-flags", "metrics", "rollouts", "a/b-testing"],
+      "description": "Monitors incremental rollouts, A/B tests, and canary releases, tracking metrics to ensure features meet desired performance or user experience targets."
+    }
+  ]
+}

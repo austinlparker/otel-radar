@@ -1,0 +1,39 @@
+{
+  "id": 4,
+  "name": "Kubernetes",
+  "category": "operations",
+  "description": "Kubernetes (k8s) is a popular container orchestration system for cloud-native software. It can be deployed across many cloud providers, on bare metal, and almost anywhere in-between.",
+  "tier": 1,
+  "dimensions": [
+    {
+      "id": 1,
+      "name": "Data Collection",
+      "description": "Using the OpenTelemetry Collector distribution for k8s, it's fairly straightforward to collect metrics and logs from your pods using traditional techniques like ServiceMonitor resources.",
+      "score": 0.8
+    },
+    {
+      "id": 2,
+      "name": "Data Processing",
+      "description": "K8s data tends to be highly structured, so minimal processing is usually required – and there are more common solutions for transforming k8s data as needed.",
+      "score": 0.8
+    },
+    {
+      "id": 3,
+      "name": "Data Export",
+      "description": "Since the OTel Collector is well-integrated into the k8s environment, adding new export destinations is as easy as updating a configuration file or deploying some new collectors",
+      "score": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Zero-Code/Agents",
+      "description": "The OpenTelemetry Operator for k8s includes a convenient automatic instrumentation custom resource, allowing for deployment of zero-code agents to pods. In addition, the otel distro includes log and metric parsers for existing k8s workloads.",
+      "score": 0.9
+    },
+    {
+      "id": 5,
+      "name": "OOTB Experience",
+      "description": "There's a variety of pre-built dashboards and alerts available for k8s workloads using OTel semantics.",
+      "score": 0.8
+    }
+  ]
+}

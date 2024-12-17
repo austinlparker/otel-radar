@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "concept": "Database Monitoring",
+  "description": "The instrumentation and telemetry techniques used to track performance, behavior, and resource utilization in database systems.",
+  "dimensions": [
+    {
+      "id": 101,
+      "facet": "PostgreSQL Client Instrumentation",
+      "maturity_score": 0.88,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["postgresql", "db", "instrumentation", "metrics", "traces"],
+      "description": "Instrumentation for PostgreSQL clients that provides spans and metrics for query execution, latency, and errors."
+    },
+    {
+      "id": 102,
+      "facet": "MySQL Client Instrumentation",
+      "maturity_score": 0.83,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["mysql", "db", "instrumentation", "metrics", "traces"],
+      "description": "Provides tracing and metrics for MySQL clients, including connection pools, query duration, and failure rates."
+    },
+    {
+      "id": 103,
+      "facet": "MongoDB Instrumentation",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.65,
+        "documentation_score": 0.75,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.6,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.65
+      },
+      "tags": ["mongodb", "nosql", "instrumentation", "metrics"],
+      "description": "Captures telemetry for MongoDB drivers, including operation latency and basic performance metrics. Less widely adopted than SQL-based instrumentation."
+    }
+  ]
+}

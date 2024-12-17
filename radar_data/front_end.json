@@ -1,0 +1,41 @@
+{
+  "id": 7,
+  "concept": "Front-end Instrumentation",
+  "description": "Tools and techniques to capture and analyze user-facing performance data from web and mobile front-ends, including page load times and user interactions.",
+  "dimensions": [
+    {
+      "id": 701,
+      "facet": "Browser (Web) Instrumentation",
+      "maturity_score": 0.82,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.78,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.8
+      },
+      "tags": ["frontend", "browser", "user-experience", "traces", "metrics"],
+      "description": "Captures page load metrics, resource timings, and user interaction traces from web applications. Adoption is increasing as teams seek end-to-end visibility."
+    },
+    {
+      "id": 702,
+      "facet": "Mobile App Instrumentation",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.65,
+        "documentation_score": 0.75,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["mobile", "ios", "android", "traces", "ui-performance"],
+      "description": "Captures performance telemetry and traces within mobile applications. Less mature than browser instrumentation but developing quickly."
+    }
+  ]
+}

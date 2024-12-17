@@ -1,0 +1,41 @@
+{
+  "id": 19,
+  "concept": "Data Pipeline Observability",
+  "description": "Telemetry for data ingestion, transformation, and loading processes, highlighting latency, throughput, data quality checks, and error rates in data workflows.",
+  "dimensions": [
+    {
+      "id": 1901,
+      "facet": "ETL Job Latency & Error Tracking",
+      "maturity_score": 0.78,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["etl", "data-pipeline", "metrics", "traces"],
+      "description": "Captures job runtimes, throughput, and error rates for ETL processes, helping ops teams diagnose slow transformations or failures."
+    },
+    {
+      "id": 1902,
+      "facet": "Data Quality Checks & Alerts",
+      "maturity_score": 0.65,
+      "maturity_score_details": {
+        "developer_experience_score": 0.6,
+        "documentation_score": 0.7,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.6,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.65
+      },
+      "tags": ["data-quality", "observability", "alerts"],
+      "description": "Monitors schema drift, null values, and unexpected data distributions. Less standardized, but growing in interest as data reliability becomes critical."
+    }
+  ]
+}

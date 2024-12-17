@@ -1,0 +1,58 @@
+{
+  "id": 17,
+  "concept": "RPC",
+  "description": "Observability and telemetry collection for applications communicating via Remote Procedure Calls, enabling insight into request latency, errors, and end-to-end service interactions.",
+  "dimensions": [
+    {
+      "id": 1701,
+      "facet": "Apache Thrift Instrumentation",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["thrift", "rpc", "traces", "metrics"],
+      "description": "Captures latency, request counts, and error rates for Thrift services. Adoption is moderate; documentation is good, but usage lags behind gRPC."
+    },
+    {
+      "id": 1702,
+      "facet": "Dubbo Instrumentation",
+      "maturity_score": 0.68,
+      "maturity_score_details": {
+        "developer_experience_score": 0.65,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.6,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.65
+      },
+      "tags": ["dubbo", "rpc", "microservices", "traces"],
+      "description": "Enables distributed tracing and metrics for Dubbo-based services, popular in certain regions. Standardization improving, but community smaller than gRPC."
+    },
+    {
+      "id": 1703,
+      "facet": "RSocket Instrumentation",
+      "maturity_score": 0.65,
+      "maturity_score_details": {
+        "developer_experience_score": 0.6,
+        "documentation_score": 0.7,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.58,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.6
+      },
+      "tags": ["rsocket", "reactive", "rpc", "observability"],
+      "description": "Traces RSocket streams and interactions, capturing latency and backpressure signals. Promising for reactive systems, but less widespread than HTTP/gRPC."
+    }
+  ]
+}

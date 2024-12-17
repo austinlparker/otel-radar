@@ -1,0 +1,41 @@
+{
+  "id": 14,
+  "concept": "IoT Device Telemetry",
+  "description": "Instrumentation and observability data collection from Internet of Things devices, which may have limited compute, memory, or network resources.",
+  "dimensions": [
+    {
+      "id": 1401,
+      "facet": "Microcontroller Metrics Collection",
+      "maturity_score": 0.4,
+      "maturity_score_details": {
+        "developer_experience_score": 0.4,
+        "documentation_score": 0.4,
+        "completeness_score": 0.4
+      },
+      "confidence_score": 0.35,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.3,
+        "sentiment_score": 0.4
+      },
+      "tags": ["iot", "embedded", "metrics"],
+      "description": "Captures rudimentary metrics (e.g., temperature, signal strength) from low-power microcontrollers. Very early-stage and niche."
+    },
+    {
+      "id": 1402,
+      "facet": "IoT Gateway Logging Integration",
+      "maturity_score": 0.5,
+      "maturity_score_details": {
+        "developer_experience_score": 0.45,
+        "documentation_score": 0.55,
+        "completeness_score": 0.5
+      },
+      "confidence_score": 0.45,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.4,
+        "sentiment_score": 0.5
+      },
+      "tags": ["iot", "logs", "gateway"],
+      "description": "Logs from IoT gateways integrated into an OTel pipeline. Limited standards and tooling availability hampers adoption."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 15,
+  "concept": "Machine Learning Pipeline Telemetry",
+  "description": "Observability for ML workflows, including data ingestion, feature extraction, model training, and model serving.",
+  "dimensions": [
+    {
+      "id": 1501,
+      "facet": "Model Training Metrics",
+      "maturity_score": 0.65,
+      "maturity_score_details": {
+        "developer_experience_score": 0.6,
+        "documentation_score": 0.7,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.6,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.55,
+        "sentiment_score": 0.65
+      },
+      "tags": ["ml", "training", "metrics"],
+      "description": "Captures metrics like training time, GPU/CPU utilization, and iteration counts. Interest is growing, but standardization is limited."
+    },
+    {
+      "id": 1502,
+      "facet": "Model Inference Tracing",
+      "maturity_score": 0.55,
+      "maturity_score_details": {
+        "developer_experience_score": 0.5,
+        "documentation_score": 0.6,
+        "completeness_score": 0.55
+      },
+      "confidence_score": 0.5,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.45,
+        "sentiment_score": 0.55
+      },
+      "tags": ["ml", "inference", "traces", "serving"],
+      "description": "Tracing inference requests through model servers, highlighting latency, model selection, and response distribution. Still evolving in practice."
+    }
+  ]
+}

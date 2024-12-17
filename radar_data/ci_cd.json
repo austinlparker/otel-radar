@@ -1,0 +1,41 @@
+{
+  "id": 10,
+  "concept": "CI/CD Pipeline Observability",
+  "description": "Tracking and analyzing metrics and traces from continuous integration and delivery pipelines to identify bottlenecks, failures, and performance issues.",
+  "dimensions": [
+    {
+      "id": 1001,
+      "facet": "Build Pipeline Instrumentation",
+      "maturity_score": 0.78,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["ci", "builds", "metrics", "devops"],
+      "description": "Enables capturing duration, success/failure counts, and resource usage for CI builds, helping identify flaky tests or slow stages."
+    },
+    {
+      "id": 1002,
+      "facet": "Deployment Pipeline Tracing",
+      "maturity_score": 0.72,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.75,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["cd", "deployments", "traces", "devops"],
+      "description": "Provides telemetry for deployments—trace rollout durations, analyze canary release performance, and correlate failures back to code changes."
+    }
+  ]
+}

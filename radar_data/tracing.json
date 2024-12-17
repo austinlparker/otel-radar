@@ -1,0 +1,75 @@
+{
+  "id": 2,
+  "concept": "Distributed Tracing",
+  "description": "Methods and tools that record and correlate data from multiple services to understand request lifecycles across distributed systems.",
+  "dimensions": [
+    {
+      "id": 201,
+      "facet": "OpenTelemetry Collector",
+      "maturity_score": 0.95,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.95,
+        "completeness_score": 1.0
+      },
+      "confidence_score": 0.9,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.9,
+        "sentiment_score": 0.9
+      },
+      "tags": ["collector", "pipeline", "vendor-agnostic", "observability"],
+      "description": "A central component for receiving, processing, and exporting telemetry. Highly adopted, well-supported, and feature-complete."
+    },
+    {
+      "id": 202,
+      "facet": "HTTP Instrumentation",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["http", "server", "client", "traces", "instrumentation"],
+      "description": "Captures request/response telemetry for HTTP-based services and clients. Widely used and well-documented."
+    },
+    {
+      "id": 203,
+      "facet": "gRPC Instrumentation",
+      "maturity_score": 0.88,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["grpc", "rpc", "distributed", "traces"],
+      "description": "Provides tracing context propagation for gRPC calls, enabling distributed tracing for microservices using gRPC."
+    },
+    {
+      "id": 204,
+      "facet": "Baggage & Context Propagation",
+      "maturity_score": 0.82,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["context", "baggage", "correlation", "telemetry"],
+      "description": "Transfers trace-related metadata across process boundaries, allowing for richer end-to-end correlation. Reasonably mature, but less widely discussed."
+    }
+  ]
+}

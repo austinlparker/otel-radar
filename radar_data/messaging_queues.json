@@ -1,0 +1,58 @@
+{
+  "id": 6,
+  "concept": "Messaging Queues",
+  "description": "Instrumentation for message queue systems, capturing enqueue/dequeue operations, latency, and throughput.",
+  "dimensions": [
+    {
+      "id": 601,
+      "facet": "RabbitMQ Instrumentation",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["rabbitmq", "messaging", "queues", "metrics"],
+      "description": "Captures metrics and spans for enqueue/dequeue operations on RabbitMQ, enabling performance and throughput analysis."
+    },
+    {
+      "id": 602,
+      "facet": "Kafka Instrumentation",
+      "maturity_score": 0.83,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.78,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.8
+      },
+      "tags": ["kafka", "streaming", "messaging", "traces", "metrics"],
+      "description": "Offers instrumentation for producers and consumers in Kafka ecosystems, capturing message latency and partition distribution."
+    },
+    {
+      "id": 603,
+      "facet": "AWS SQS Instrumentation",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["aws", "sqs", "messaging", "queues"],
+      "description": "Helps monitor AWS SQS operations, including message attributes, queue size, and throughput. Useful but less widely discussed than RabbitMQ/Kafka."
+    }
+  ]
+}

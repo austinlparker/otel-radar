@@ -1,0 +1,41 @@
+{
+  "id": 13,
+  "concept": "Edge Computing Instrumentation",
+  "description": "Telemetry collected from distributed computing environments at the network's edge, often running on constrained or specialized hardware.",
+  "dimensions": [
+    {
+      "id": 1301,
+      "facet": "Edge Gateway Metrics",
+      "maturity_score": 0.6,
+      "maturity_score_details": {
+        "developer_experience_score": 0.55,
+        "documentation_score": 0.6,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.55,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.5,
+        "sentiment_score": 0.6
+      },
+      "tags": ["edge", "gateway", "metrics"],
+      "description": "Collects CPU, memory, and request statistics from edge gateway devices. Emerging area with limited tooling and examples."
+    },
+    {
+      "id": 1302,
+      "facet": "Distributed Edge Trace Propagation",
+      "maturity_score": 0.58,
+      "maturity_score_details": {
+        "developer_experience_score": 0.5,
+        "documentation_score": 0.6,
+        "completeness_score": 0.65
+      },
+      "confidence_score": 0.5,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.45,
+        "sentiment_score": 0.55
+      },
+      "tags": ["edge", "traces", "context-propagation"],
+      "description": "Context propagation between edge devices and central systems. Less mature due to intermittent connectivity and less standardized platforms."
+    }
+  ]
+}

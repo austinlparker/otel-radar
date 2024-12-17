@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+    :root {
+        --background: theme("colors.white");
+        --foreground: theme("colors.slate.900");
+    }
+
+    :root[class~="dark"] {
+        --background: theme("colors.slate.950");
+        --foreground: theme("colors.white");
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes radar-sweep {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-radar-sweep {
+    animation: radar-sweep 4s linear infinite;
+}
+
+.recharts-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.recharts-surface {
+    overflow: visible;
 }

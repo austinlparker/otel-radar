@@ -1,0 +1,58 @@
+{
+  "id": 12,
+  "concept": "Cloud Platform Integration",
+  "description": "Integrations with major cloud providers to capture and correlate metrics, traces, and logs from managed services and cloud infrastructure.",
+  "dimensions": [
+    {
+      "id": 1201,
+      "facet": "AWS EC2 & ECS Instrumentation",
+      "maturity_score": 0.87,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["aws", "ec2", "ecs", "infrastructure", "metrics"],
+      "description": "Captures resource utilization, scaling events, and networking data from AWS compute services, widely used across many organizations."
+    },
+    {
+      "id": 1202,
+      "facet": "GCP Compute Engine & GKE Integration",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.78,
+        "documentation_score": 0.85,
+        "completeness_score": 0.78
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["gcp", "compute-engine", "gke", "metrics", "traces"],
+      "description": "Provides telemetry for Google’s compute services and managed Kubernetes environment, helping correlate application performance with underlying infrastructure."
+    },
+    {
+      "id": 1203,
+      "facet": "Azure VM & AKS Instrumentation",
+      "maturity_score": 0.83,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.78,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.8
+      },
+      "tags": ["azure", "vm", "aks", "metrics", "traces"],
+      "description": "Gathers telemetry from Azure’s virtual machines and managed Kubernetes service, connecting performance data to app-level signals."
+    }
+  ]
+}
