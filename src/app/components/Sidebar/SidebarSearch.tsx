@@ -2,13 +2,13 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { SidebarSearchProps } from "./types";
 
-interface SidebarSearchProps {
-  value: string;
-  onChange: (value: string) => void;
-}
-
-export default function SidebarSearch({ value, onChange }: SidebarSearchProps) {
+export default function SidebarSearch({
+  value,
+  onChange,
+  placeholder,
+}: SidebarSearchProps) {
   return (
     <div className="p-6">
       <div className="relative">
@@ -18,7 +18,7 @@ export default function SidebarSearch({ value, onChange }: SidebarSearchProps) {
         />
         <input
           type="text"
-          placeholder="Search..."
+          placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
           className="w-full pl-10 pr-4 py-2 rounded-lg

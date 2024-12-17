@@ -11,31 +11,17 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { Dimension } from "@/types";
 import { calculateDimensionPositions, getRingData } from "./utils";
 import { COLORS, DIMENSIONS } from "./constants";
 import { CustomTooltip } from "./CustomTooltip";
 import { ZoomWrapper } from "./ZoomWrapper";
-
-interface RadarProps {
-  dimensions: Dimension[];
-  selectedDimension: Dimension | null;
-  onDimensionClick: (dimension: Dimension) => void;
-}
-
-interface DataPoint {
-  x: number;
-  y: number;
-  z: number;
-  dimension: Dimension;
-  score: number;
-}
-
-interface RingDataPoint {
-  x: number;
-  y: number;
-  z: number;
-}
+import { ReactZoomPanPinchRef } from "react-zoom-pan-pinch";
+import {
+  RadarProps,
+  DataPoint,
+  RingDataPoint,
+  RechartsScatterProps,
+} from "./types";
 
 export default function Radar({
   dimensions,
@@ -43,7 +29,7 @@ export default function Radar({
   onDimensionClick,
 }: RadarProps) {
   const radius = 600;
-  const transformRef = useRef<any>(null);
+  const transformRef = useRef<ReactZoomPanPinchRef>(null);
 
   const handleClick = (data: DataPoint) => {
     if (data?.dimension) {
@@ -71,7 +57,6 @@ export default function Radar({
     [radius],
   );
 
-  // Function to determine point color based on score
   const getPointColor = (score: number) => {
     if (score >= 0.7) return COLORS.GREEN;
     if (score >= 0.4) return COLORS.YELLOW;
@@ -107,12 +92,11 @@ export default function Radar({
                 ]}
               />
 
-              {/* Background Rings */}
               <Scatter
                 data={ringData}
                 fill="none"
                 cursor="default"
-                shape={(props) => (
+                shape={(props: RechartsScatterProps) => (
                   <circle
                     cx={props.cx}
                     cy={props.cy}
@@ -125,7 +109,6 @@ export default function Radar({
                 )}
               />
 
-              {/* Dimension Points */}
               <Scatter
                 data={data}
                 cursor="pointer"
@@ -146,7 +129,6 @@ export default function Radar({
                   />
                 ))}
               </Scatter>
-
               <Tooltip
                 content={<CustomTooltip />}
                 cursor={false}

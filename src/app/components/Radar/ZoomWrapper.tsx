@@ -1,13 +1,17 @@
 import { ReactNode, forwardRef } from "react";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import {
+  TransformWrapper,
+  TransformComponent,
+  ReactZoomPanPinchRef,
+} from "react-zoom-pan-pinch";
 
 interface ZoomWrapperProps {
   children: ReactNode;
   onZoomToPoint?: (x: number, y: number) => void;
 }
 
-export const ZoomWrapper = forwardRef<any, ZoomWrapperProps>(
-  ({ children, onZoomToPoint }, ref) => {
+export const ZoomWrapper = forwardRef<ReactZoomPanPinchRef, ZoomWrapperProps>(
+  ({ children }, ref) => {
     return (
       <TransformWrapper
         ref={ref}

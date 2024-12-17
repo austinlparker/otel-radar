@@ -1,22 +1,18 @@
 import { Topic } from "@/types";
 
-export interface Selection {
-  topics: string[];
-  dimensions: Record<string, string[]>;
-}
-
 export interface SidebarProps {
   topics: Topic[];
-  onSelectionChange: (selection: Selection) => void;
+  onSelectionChange: (conceptId: string | null, searchQuery?: string) => void;
 }
 
-export interface SidebarContentProps extends SidebarProps {
+export interface SidebarSearchProps {
+  value: string;
+  onChange: (query: string) => void;
+  placeholder?: string;
+}
+
+export interface SidebarContentProps {
+  topics: Topic[];
+  onSelectionChange: (conceptId: string | null, searchQuery?: string) => void;
   onClose?: () => void;
-}
-
-export interface TreeNode {
-  id: string;
-  name: string;
-  type: "topic" | "dimension";
-  children?: TreeNode[];
 }

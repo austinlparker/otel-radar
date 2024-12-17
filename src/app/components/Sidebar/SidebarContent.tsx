@@ -6,7 +6,6 @@ import SidebarHeader from "./SidebarHeader";
 import SidebarSearch from "./SidebarSearch";
 import SidebarTree from "./SidebarTree";
 import SidebarFooter from "./SidebarFooter";
-import { Topic } from "@/types";
 
 export default function SidebarContent({
   topics,

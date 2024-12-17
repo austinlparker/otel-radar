@@ -7,13 +7,9 @@ import DetailsPanel from "./components/DetailsPanel";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { AnimatePresence } from "framer-motion";
 import { useResponsive } from "@/hooks/useResponsive";
-import { Topic } from "../types";
 import { getTopics } from "../lib/topics";
 
-interface Selection {
-  topics: Topic[];
-  searchQuery: string;
-}
+import { Topic, Dimension } from "@/types";
 
 interface FilteredData {
   concept: string | null;
