@@ -42,9 +42,7 @@ export default {
       spacing: {
         sidebar: "320px",
       },
-      gradientColorStops: (theme) => ({
-        ...theme("colors"),
-      }),
+      // Remove gradientColorStops and just use the colors directly
       backgroundImage: {
         "radar-gradient": `radial-gradient(
           circle at center,

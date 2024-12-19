@@ -40,6 +40,12 @@ export interface RadarData {
   dimension: Dimension;
 }
 
+export interface RadarPoint {
+  x: number;
+  y: number;
+  dimension: Dimension;
+}
+
 export interface RadarTooltipProps {
   dimension: Dimension;
   position: {

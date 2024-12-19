@@ -71,7 +71,7 @@ function RadarChart({
     [config.radius],
   );
 
-  const { points, polygonPoints } = useMemo(() => {
+  const { points } = useMemo(() => {
     const angleStep = (2 * Math.PI) / dimensions.length;
     const points = dimensions.map((dim, i) => {
       const angle = i * angleStep - Math.PI / 2; // Start from top
