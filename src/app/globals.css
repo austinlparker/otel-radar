@@ -36,3 +36,13 @@
 .recharts-surface {
     overflow: visible;
 }
+
+@layer utilities {
+    .radial-bar-background {
+        @apply fill-blue-900/20;
+    }
+
+    .radial-bar-hover {
+        @apply opacity-80 transition-opacity duration-300;
+    }
+}

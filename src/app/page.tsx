@@ -8,6 +8,7 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 import { AnimatePresence } from "framer-motion";
 import { useResponsive } from "@/hooks/useResponsive";
 import { getTopics } from "../lib/topics";
+import { calculateTopicAverageScore } from "../lib/topics";
 
 import { Topic, Dimension } from "@/types";
 
@@ -15,6 +16,11 @@ interface FilteredData {
   concept: string | null;
   dimensions: Dimension[];
   searchQuery: string;
+}
+
+interface AggregatedDimension extends Dimension {
+  isAggregate?: boolean;
+  parentTopic?: Topic;
 }
 
 const Radar = dynamic(() => import("./components/Radar/index"), {
@@ -40,10 +46,31 @@ export default function Home() {
     const loadTopics = async () => {
       const loadedTopics = await getTopics();
       setTopics(loadedTopics);
-      // Initialize with all dimensions
+      const aggregateDimensions: AggregatedDimension[] = loadedTopics.map(
+        (topic) => ({
+          id: topic.id,
+          facet: topic.concept,
+          description: topic.description,
+          maturity_score: calculateTopicAverageScore(topic),
+          maturity_score_details: {
+            developer_experience_score: 0,
+            documentation_score: 0,
+            completeness_score: 0,
+          },
+          confidence_score: 1,
+          confidence_score_breakdown: {
+            real_world_score: 1,
+            sentiment_score: 1,
+          },
+          tags: [],
+          isAggregate: true,
+          parentTopic: topic,
+        }),
+      );
+
       setFilteredData({
         concept: null,
-        dimensions: loadedTopics.flatMap((t) => t.dimensions),
+        dimensions: aggregateDimensions,
         searchQuery: "",
       });
     };
@@ -56,10 +83,31 @@ export default function Home() {
     searchQuery: string = "",
   ) => {
     if (!conceptId && !searchQuery) {
-      // Show all dimensions if nothing is selected/searched
+      const aggregateDimensions: AggregatedDimension[] = topics.map(
+        (topic) => ({
+          id: topic.id,
+          facet: topic.concept,
+          description: topic.description,
+          maturity_score: calculateTopicAverageScore(topic),
+          maturity_score_details: {
+            developer_experience_score: 0,
+            documentation_score: 0,
+            completeness_score: 0,
+          },
+          confidence_score: 1,
+          confidence_score_breakdown: {
+            real_world_score: 1,
+            sentiment_score: 1,
+          },
+          tags: [],
+          isAggregate: true,
+          parentTopic: topic,
+        }),
+      );
+
       setFilteredData({
         concept: null,
-        dimensions: topics.flatMap((t) => t.dimensions),
+        dimensions: aggregateDimensions,
         searchQuery: "",
       });
       return;
@@ -102,10 +150,17 @@ export default function Home() {
               selectedTopic ? selectedTopic.dimensions[0] : null
             }
             onDimensionClick={(dimension) => {
-              const topic = topics.find((t) =>
-                t.dimensions.some((d) => d.id === dimension.id),
-              );
-              setSelectedTopic(topic || null);
+              if ((dimension as AggregatedDimension).isAggregate) {
+                // Handle aggregate dimension click
+                const aggregateDim = dimension as AggregatedDimension;
+                setSelectedTopic(aggregateDim.parentTopic || null);
+              } else {
+                // Handle regular dimension click
+                const topic = topics.find((t) =>
+                  t.dimensions.some((d) => d.id === dimension.id),
+                );
+                setSelectedTopic(topic || null);
+              }
             }}
           />
 

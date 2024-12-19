@@ -21,3 +21,8 @@ export async function getTopics(): Promise<Topic[]> {
     return [];
   }
 }
+
+export function calculateTopicAverageScore(topic: Topic): number {
+  const scores = topic.dimensions.map((d) => d.maturity_score);
+  return scores.reduce((a, b) => a + b, 0) / scores.length;
+}
