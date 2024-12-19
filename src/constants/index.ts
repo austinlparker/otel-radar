@@ -16,35 +16,20 @@ export const COLORS = {
 } as const;
 
 export const DIMENSIONS = {
-  SIDEBAR: {
-    WIDTH: 320,
-    MOBILE_HEIGHT: "80vh",
-  },
   RADAR: {
     WIDTH: 800,
     HEIGHT: 800,
-    MARGIN: 100,
+    MARGIN: 40,
     POINTS: {
-      RADIUS: 10,
-      RADIUS_HOVER: 15,
-      STROKE_WIDTH: 2,
+      RADIUS: 8, // Default point radius
+      RADIUS_HOVER: 12, // Hover state radius
     },
     CIRCLES: {
       INTERVALS: [0.2, 0.4, 0.6, 0.8, 1],
-      STROKE_OPACITY: 0.4,
     },
   },
-} as const;
-
-export const ANIMATIONS = {
-  DURATION: {
-    FAST: 200,
-    MEDIUM: 500,
-    SLOW: 750,
-  },
-  SPRING: {
-    GENTLE: { type: "spring", damping: 25 },
-    BOUNCY: { type: "spring", damping: 15 },
+  SIDEBAR: {
+    WIDTH: 320,
   },
 } as const;
 
@@ -58,5 +43,16 @@ export const THRESHOLDS = {
     MOBILE: 640,
     TABLET: 1024,
     DESKTOP: 1280,
+  },
+} as const;
+
+export const ANIMATIONS = {
+  DURATION: {
+    FAST: 200,
+    MEDIUM: 500,
+    SLOW: 750,
+  },
+  SPRING: {
+    GENTLE: { type: "spring", damping: 25 },
   },
 } as const;

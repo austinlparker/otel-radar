@@ -1,0 +1,39 @@
+{
+  "id": 6,
+  "name": "Serverless",
+  "category": "operations",
+  "description": "Serverless technologies are a form of abstraction between infrastructure and developer, eliding deployment and delivery details in order to provide many benefits such as globally-deployed services, invocation-based pricing, and demand-based scaling. OpenTelemetry can be a challenge in these environments due to their specificity.",
+  "tier": 3,
+  "dimensions": [
+    {
+      "id": 1,
+      "name": "Data Collection",
+      "description": "Until serverless platforms adopt OpenTelemetry natively, it is difficult to ensure collection of certain signal types like spans or metrics. Event logging is usually the most effective form of telemetry data output.",
+      "score": 0.3
+    },
+    {
+      "id": 2,
+      "name": "Data Processing",
+      "description": "Often, serverless platforms require more processing of raw telemetry in order to visualize workflows and handle data scrubbing. The deployment of Collectors to handle this processing can be a challenge as well due to their global nature.",
+      "score": 0.5
+    },
+    {
+      "id": 3,
+      "name": "Data Export",
+      "description": "Export of pushed OTLP data is generally a challenge on many serverless platforms, although this has been improving as OpenTelemetry gains in popularity. You will often need to use a buffer (such as Cloudwatch, or some other form of queue) to ensure reliable delivery of data to Collectors or observability backends.",
+      "score": 0.4
+    },
+    {
+      "id": 4,
+      "name": "Zero-Code/Agents",
+      "description": "Most popular serverless languages are supported by OpenTelemetry Agents, but you may encounter difficulties with collection, processing, and export.",
+      "score": 0.6
+    },
+    {
+      "id": 5,
+      "name": "OOTB Experience",
+      "description": "Proprietary tooling tends to have a strong edge in serverless workload observability due to the proprietary nature of serverless platforms. We hope that this improves.",
+      "score": 0.2
+    }
+  ]
+}

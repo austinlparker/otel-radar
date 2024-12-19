@@ -1,54 +1,39 @@
 "use client";
 
-import { useState } from "react";
-import { SidebarContentProps } from "./types";
-import SidebarHeader from "./SidebarHeader";
+import { SidebarContentProps } from "@/types";
+import SidebarLogo from "./SidebarLogo";
 import SidebarSearch from "./SidebarSearch";
 import SidebarTree from "./SidebarTree";
 import SidebarFooter from "./SidebarFooter";
 
 export default function SidebarContent({
   topics,
-  onSelectionChange,
-  onClose,
+  searchQuery,
+  selectedConcept,
+  onSearch,
+  onConceptSelect,
 }: SidebarContentProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedConcept, setSelectedConcept] = useState<string | null>(null);
-
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    setSelectedConcept(null);
-    onSelectionChange(null, query);
-  };
-
-  const handleConceptSelect = (conceptId: string) => {
-    const newSelection = conceptId === selectedConcept ? null : conceptId;
-    setSelectedConcept(newSelection);
-    setSearchQuery("");
-    onSelectionChange(newSelection, "");
-  };
-
   return (
-    <div className="h-full flex flex-col">
-      <SidebarHeader onClose={onClose} />
-
+    <div
+      className="h-full flex flex-col bg-white dark:bg-slate-950/90
+                    backdrop-blur border-r border-slate-200 dark:border-blue-600/20"
+    >
+      <SidebarLogo />
       <div className="flex-1 overflow-hidden flex flex-col">
         <SidebarSearch
           value={searchQuery}
-          onChange={handleSearch}
+          onChange={onSearch}
           placeholder="Search concepts, dimensions..."
         />
-
         <div className="flex-1 overflow-y-auto px-6">
           <SidebarTree
             topics={topics}
             searchQuery={searchQuery}
             selectedConcept={selectedConcept}
-            onConceptSelect={handleConceptSelect}
+            onConceptSelect={onConceptSelect}
           />
         </div>
       </div>
-
       <SidebarFooter />
     </div>
   );

@@ -71,3 +71,18 @@ export interface DetailsPanelProps {
   onClose: () => void;
   isMobile?: boolean;
 }
+
+export interface SidebarContentProps {
+  topics: Topic[];
+  searchQuery: string;
+  selectedConcept: string | null;
+  onSearch: (query: string) => void;
+  onConceptSelect: (conceptId: string) => void;
+}
+
+export interface SidebarTreeProps {
+  topics: Topic[];
+  searchQuery: string;
+  selectedConcept: string | null;
+  onConceptSelect: (conceptId: string) => void;
+}

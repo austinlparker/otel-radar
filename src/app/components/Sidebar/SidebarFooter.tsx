@@ -5,13 +5,15 @@ import ThemeToggle from "../ThemeToggle";
 
 export default function SidebarFooter() {
   return (
-    <div className="p-4 lg:p-6 border-t border-blue-600/20">
+    <div className="p-4 lg:p-6 border-t border-slate-200 dark:border-blue-600/20">
       <div className="flex items-center justify-between mb-4">
         <a
           href="https://honeycomb.io"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+          className="text-sm text-slate-500 dark:text-blue-400
+                     hover:text-slate-700 dark:hover:text-blue-300
+                     transition-colors"
         >
           a honeycomb.io joint
         </a>
@@ -29,7 +31,9 @@ export default function SidebarFooter() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
+            className="text-slate-400 dark:text-blue-400
+                       hover:text-slate-600 dark:hover:text-blue-300
+                       transition-colors"
           >
             <FontAwesomeIcon icon={link.icon} className="w-5 h-5" />
           </a>

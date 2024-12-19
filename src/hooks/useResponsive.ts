@@ -2,16 +2,22 @@ import { useState, useEffect } from "react";
 import { THRESHOLDS } from "@/constants";
 
 export function useResponsive() {
-  const [breakpoint, setBreakpoint] = useState({
+  const [dimensions, setDimensions] = useState({
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
     isMobile: false,
     isTablet: false,
     isDesktop: false,
   });
 
   useEffect(() => {
-    const updateBreakpoint = () => {
+    const updateDimensions = () => {
       const width = window.innerWidth;
-      setBreakpoint({
+      const height = window.innerHeight;
+
+      setDimensions({
+        width,
+        height,
         isMobile: width < THRESHOLDS.BREAKPOINTS.MOBILE,
         isTablet:
           width >= THRESHOLDS.BREAKPOINTS.MOBILE &&
@@ -20,10 +26,10 @@ export function useResponsive() {
       });
     };
 
-    updateBreakpoint();
-    window.addEventListener("resize", updateBreakpoint);
-    return () => window.removeEventListener("resize", updateBreakpoint);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  return breakpoint;
+  return dimensions;
 }

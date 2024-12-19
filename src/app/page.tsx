@@ -143,7 +143,7 @@ export default function Home() {
       <main className="flex max-h-screen overflow-hidden">
         <Sidebar topics={topics} onSelectionChange={handleSelectionChange} />
 
-        <div className="flex-1 relative">
+        <div className="flex-1 relative h-screen pt-[88px] pb-[72px] lg:pt-0 lg:pb-0">
           <Radar
             dimensions={filteredData.dimensions}
             selectedDimension={

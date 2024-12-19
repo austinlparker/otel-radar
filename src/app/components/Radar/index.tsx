@@ -7,33 +7,43 @@ import { RadarProps, RadarPoint } from "@/types";
 import { DIMENSIONS, ANIMATIONS } from "@/constants";
 import { getPointColor } from "./utils";
 import { RadarTooltip } from "./RadarTooltip";
-
-const defaultMargin = { top: 40, left: 40, right: 40, bottom: 40 };
+import { useResponsive } from "@/hooks/useResponsive";
+import { MobileView } from "./MobileView";
 
 function Radar({
   dimensions,
   selectedDimension,
   onDimensionClick,
 }: RadarProps) {
+  const { isMobile } = useResponsive();
+
   return (
-    <ParentSize>
-      {({ width, height }) => (
-        <RadarChart
-          width={width}
-          height={height}
+    <div className="w-full h-full">
+      {isMobile ? (
+        <MobileView
           dimensions={dimensions}
-          selectedDimension={selectedDimension}
           onDimensionClick={onDimensionClick}
         />
+      ) : (
+        <ParentSize>
+          {({ width, height }) => (
+            <RadarChart
+              width={width}
+              height={height}
+              dimensions={dimensions}
+              selectedDimension={selectedDimension}
+              onDimensionClick={onDimensionClick}
+            />
+          )}
+        </ParentSize>
       )}
-    </ParentSize>
+    </div>
   );
 }
 
 interface RadarChartProps extends RadarProps {
   width: number;
   height: number;
-  margin?: typeof defaultMargin;
   levels?: number;
 }
 
@@ -43,24 +53,33 @@ function RadarChart({
   dimensions,
   selectedDimension,
   onDimensionClick,
-  margin = defaultMargin,
   levels = 5,
 }: RadarChartProps) {
   const [hoveredPoint, setHoveredPoint] = useState<RadarPoint | null>(null);
+  const { isMobile } = useResponsive();
 
   const config = useMemo(() => {
-    const xMax = width - margin.left - margin.right;
-    const yMax = height - margin.top - margin.bottom;
-    const radius = Math.min(xMax, yMax) / 2;
+    // Calculate available space with margins
+    const margin = isMobile ? 20 : 40;
+    const availableSize = Math.min(width, height) - margin * 2;
+
+    // On mobile, account for header/footer space and constrain size
+    const maxSize = isMobile
+      ? Math.min(availableSize, window.innerHeight - 200)
+      : availableSize;
+    const radius = maxSize / 2;
 
     return {
-      width,
-      height,
+      width: maxSize,
+      height: maxSize,
       radius,
-      centerX: width / 2,
+      centerX: width / 2, // Center in available space
       centerY: height / 2,
+      pointRadius: isMobile
+        ? DIMENSIONS.RADAR.POINTS.RADIUS * 0.8
+        : DIMENSIONS.RADAR.POINTS.RADIUS,
     };
-  }, [width, height, margin]);
+  }, [width, height, isMobile]);
 
   const radiusScale = useMemo(
     () =>
@@ -96,8 +115,13 @@ function RadarChart({
   );
 
   return (
-    <div className="relative w-full h-full">
-      <svg width={width} height={height}>
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      <svg
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+        preserveAspectRatio="xMidYMid meet"
+      >
         <defs>
           <radialGradient
             id="radar-gradient"
