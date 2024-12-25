@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faBluesky } from "@fortawesome/free-brands-svg-icons";

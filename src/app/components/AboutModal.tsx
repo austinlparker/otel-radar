@@ -93,7 +93,7 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     </li>
                     <li className="flex items-center space-x-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                      <span>Each category's position is determined by the aggregate of these individual scores for all child components.</span>
+                      <span>Each category&apos;s position is determined by the aggregate of these individual scores for all child components.</span>
                     </li>
                   </ul>
                 </div>
