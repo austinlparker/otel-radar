@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Teko, Michroma } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { ModalProvider } from "./components/ModalProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,7 +42,11 @@ export default function RootLayout({
               transition-colors duration-300`}
         suppressHydrationWarning
       >
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          <ModalProvider>
+          {children}
+          </ModalProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
