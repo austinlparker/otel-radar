@@ -35,7 +35,7 @@
         "sentiment_score": 0.8
       },
       "tags": ["gcp", "compute-engine", "gke", "metrics", "traces"],
-      "description": "Provides telemetry for Google’s compute services and managed Kubernetes environment, helping correlate application performance with underlying infrastructure."
+      "description": "Provides telemetry for Google's compute services and managed Kubernetes environment, helping correlate application performance with underlying infrastructure."
     },
     {
       "id": 1203,
@@ -52,7 +52,92 @@
         "sentiment_score": 0.8
       },
       "tags": ["azure", "vm", "aks", "metrics", "traces"],
-      "description": "Gathers telemetry from Azure’s virtual machines and managed Kubernetes service, connecting performance data to app-level signals."
+      "description": "Gathers telemetry from Azure's virtual machines and managed Kubernetes service, connecting performance data to app-level signals."
+    },
+    {
+      "id": 1204,
+      "facet": "AWS CloudWatch & X-Ray Integration",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.82,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.84
+      },
+      "tags": ["aws", "cloudwatch", "xray", "logs", "traces"],
+      "description": "Native integration with AWS observability services through dedicated exporters for CloudWatch Logs, CloudWatch EMF metrics, and X-Ray traces."
+    },
+    {
+      "id": 1205,
+      "facet": "GCP Cloud Operations Integration",
+      "maturity_score": 0.82,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["gcp", "cloud-operations", "cloud-monitoring", "cloud-trace"],
+      "description": "Integration with Google Cloud Operations suite including Cloud Monitoring, Cloud Trace, and Cloud Logging through dedicated exporters."
+    },
+    {
+      "id": 1206,
+      "facet": "Alibaba Cloud Integration",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["alibaba", "cloud", "log-service"],
+      "description": "Integration with Alibaba Cloud Log Service for collecting and analyzing telemetry data from applications and infrastructure."
+    },
+    {
+      "id": 1207,
+      "facet": "Cloud Database Observability",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["database", "mysql", "clickhouse", "cassandra"],
+      "description": "Native OpenTelemetry support for major cloud databases including MySQL Enterprise, ClickHouse, and Cassandra with query-level tracing."
+    },
+    {
+      "id": 1208,
+      "facet": "Cloud Service Mesh Telemetry",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.83,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.8
+      },
+      "tags": ["service-mesh", "istio", "envoy", "kubernetes"],
+      "description": "Built-in OpenTelemetry support in major service mesh implementations including Istio and Envoy for detailed request-level telemetry."
     }
   ]
 }

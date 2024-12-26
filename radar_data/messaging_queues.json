@@ -53,6 +53,125 @@
       },
       "tags": ["aws", "sqs", "messaging", "queues"],
       "description": "Helps monitor AWS SQS operations, including message attributes, queue size, and throughput. Useful but less widely discussed than RabbitMQ/Kafka."
+    },
+    {
+      "id": 604,
+      "facet": "Google Cloud Pub/Sub Monitoring",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["gcp", "pubsub", "cloud", "messaging"],
+      "description": "Integration with Google Cloud Pub/Sub for monitoring message flow, subscription latency, and delivery acknowledgments."
+    },
+    {
+      "id": 605,
+      "facet": "Azure Service Bus Telemetry",
+      "maturity_score": 0.78,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["azure", "service-bus", "cloud", "messaging"],
+      "description": "Monitoring for Azure Service Bus including topic subscriptions, dead-letter queues, and message processing metrics."
+    },
+    {
+      "id": 606,
+      "facet": "Apache Pulsar Integration",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["pulsar", "messaging", "streaming", "apache"],
+      "description": "Telemetry for Apache Pulsar brokers and clients, tracking topic metrics, subscription backlog, and consumer lag."
+    },
+    {
+      "id": 607,
+      "facet": "NATS Observability",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["nats", "messaging", "streaming", "cloud-native"],
+      "description": "Monitoring for NATS messaging system including subject-based metrics, queue group performance, and streaming replication."
+    },
+    {
+      "id": 608,
+      "facet": "Redis Streams Monitoring",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.75,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["redis", "streams", "messaging", "in-memory"],
+      "description": "Instrumentation for Redis Streams including consumer group metrics, stream length monitoring, and message acknowledgment tracking."
+    },
+    {
+      "id": 609,
+      "facet": "Message Router Instrumentation",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.75,
+        "sentiment_score": 0.85
+      },
+      "tags": ["routing", "messaging", "patterns", "enterprise"],
+      "description": "Monitoring for message routing patterns including content-based routing, message transformation, and routing rule evaluation metrics."
+    },
+    {
+      "id": 610,
+      "facet": "Dead Letter Queue Analysis",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["dlq", "error-handling", "messaging", "reliability"],
+      "description": "Cross-platform dead letter queue monitoring including failure categorization, retry attempts, and message parking metrics."
     }
   ]
 }

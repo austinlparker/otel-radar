@@ -53,6 +53,125 @@
       },
       "tags": ["http", "proxy", "gateway", "observability"],
       "description": "Telemetry for HTTP proxies and API gateways, aiding in understanding high-level request routing and performance bottlenecks."
+    },
+    {
+      "id": 504,
+      "facet": "API Gateway Mesh Observability",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["api-gateway", "kong", "tyk", "service-mesh"],
+      "description": "Native OpenTelemetry support in API gateways like Kong and Tyk for detailed request tracking, rate limiting, and authentication events."
+    },
+    {
+      "id": 505,
+      "facet": "Service Mesh HTTP Telemetry",
+      "maturity_score": 0.88,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.85,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["service-mesh", "istio", "envoy", "http2"],
+      "description": "HTTP traffic monitoring in service meshes including Istio and Envoy, with detailed protocol-level metrics and distributed tracing."
+    },
+    {
+      "id": 506,
+      "facet": "Web Framework Integration",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["frameworks", "express", "spring", "django"],
+      "description": "Built-in instrumentation for popular web frameworks, capturing middleware execution, template rendering, and framework-specific events."
+    },
+    {
+      "id": 507,
+      "facet": "HTTP Load Balancer Monitoring",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["load-balancer", "traefik", "haproxy", "metrics"],
+      "description": "Telemetry for HTTP load balancers tracking backend health, connection pools, and routing decisions."
+    },
+    {
+      "id": 508,
+      "facet": "gRPC Protocol Monitoring",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["grpc", "http2", "rpc", "streaming"],
+      "description": "Specialized support for gRPC monitoring including streaming operations, status codes, and method-level telemetry."
+    },
+    {
+      "id": 509,
+      "facet": "HTTP Client Library Integration",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["http-client", "axios", "fetch", "libraries"],
+      "description": "Instrumentation for popular HTTP client libraries with automatic context propagation and detailed request lifecycle tracking."
+    },
+    {
+      "id": 510,
+      "facet": "GraphQL Server Monitoring",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["graphql", "apollo", "queries", "resolvers"],
+      "description": "Specialized instrumentation for GraphQL servers including resolver timing, query complexity, and batch operation tracking."
     }
   ]
 }

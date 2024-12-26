@@ -53,6 +53,125 @@
       },
       "tags": ["mongodb", "nosql", "instrumentation", "metrics"],
       "description": "Captures telemetry for MongoDB drivers, including operation latency and basic performance metrics. Less widely adopted than SQL-based instrumentation."
+    },
+    {
+      "id": 104,
+      "facet": "ClickHouse Native Integration",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["clickhouse", "olap", "analytics", "traces"],
+      "description": "Native OpenTelemetry support in ClickHouse for query stages, distributed queries, and planning operations with detailed span tracking."
+    },
+    {
+      "id": 105,
+      "facet": "Cassandra Monitoring",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["cassandra", "nosql", "distributed", "metrics"],
+      "description": "Telemetry for Cassandra operations including read/write latencies, partition sizes, and cluster health metrics across distributed nodes."
+    },
+    {
+      "id": 106,
+      "facet": "Elasticsearch Integration",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["elasticsearch", "search", "metrics", "logging"],
+      "description": "Comprehensive monitoring for Elasticsearch clusters including search latencies, indexing performance, and cluster health metrics."
+    },
+    {
+      "id": 107,
+      "facet": "Redis Instrumentation",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["redis", "cache", "metrics", "memory"],
+      "description": "Monitoring for Redis instances tracking command latencies, memory usage, eviction rates, and connection pool metrics."
+    },
+    {
+      "id": 108,
+      "facet": "SQL Query Analysis",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["sql", "query-analysis", "performance", "optimization"],
+      "description": "Cross-database SQL query analysis including execution plans, index usage, and query optimization recommendations based on collected telemetry."
+    },
+    {
+      "id": 109,
+      "facet": "Database Connection Pooling",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.9
+      },
+      "tags": ["connection-pool", "hikari", "pgbouncer", "metrics"],
+      "description": "Monitoring for database connection pools including pool utilization, wait times, timeout rates, and connection lifecycle events."
+    },
+    {
+      "id": 110,
+      "facet": "Time Series Database Integration",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["timeseries", "influxdb", "prometheus", "metrics"],
+      "description": "Support for time series databases with focus on write throughput, compression ratios, and query performance metrics."
     }
   ]
 }

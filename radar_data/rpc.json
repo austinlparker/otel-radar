@@ -53,6 +53,125 @@
       },
       "tags": ["rsocket", "reactive", "rpc", "observability"],
       "description": "Traces RSocket streams and interactions, capturing latency and backpressure signals. Promising for reactive systems, but less widespread than HTTP/gRPC."
+    },
+    {
+      "id": 1704,
+      "facet": "gRPC Core Instrumentation",
+      "maturity_score": 0.9,
+      "maturity_score_details": {
+        "developer_experience_score": 0.9,
+        "documentation_score": 0.9,
+        "completeness_score": 0.9
+      },
+      "confidence_score": 0.85,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.85,
+        "sentiment_score": 0.85
+      },
+      "tags": ["grpc", "http2", "streaming", "traces"],
+      "description": "Comprehensive instrumentation for gRPC including streaming operations, status codes, and metadata propagation. Industry standard with excellent tooling support."
+    },
+    {
+      "id": 1705,
+      "facet": "Envoy RPC Proxy Monitoring",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["envoy", "proxy", "grpc", "load-balancing"],
+      "description": "Telemetry for Envoy's RPC proxy capabilities including request routing, load balancing decisions, and protocol upgrades."
+    },
+    {
+      "id": 1706,
+      "facet": "NATS RPC Framework",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.75,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["nats", "messaging", "rpc", "cloud-native"],
+      "description": "Monitoring for NATS-based RPC patterns including request-reply services, subject-based routing, and queue groups."
+    },
+    {
+      "id": 1707,
+      "facet": "Dapr RPC Observability",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["dapr", "microservices", "rpc", "cloud"],
+      "description": "Built-in telemetry for Dapr's RPC invocation building block, tracking service-to-service calls and actor interactions."
+    },
+    {
+      "id": 1708,
+      "facet": "tRPC Instrumentation",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["trpc", "typescript", "rpc", "web"],
+      "description": "Telemetry for tRPC endpoints including type-safe procedure calls, client-server interactions, and subscription monitoring."
+    },
+    {
+      "id": 1709,
+      "facet": "JSON-RPC Monitoring",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.75,
+        "documentation_score": 0.75,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.65,
+        "sentiment_score": 0.75
+      },
+      "tags": ["json-rpc", "web", "api", "legacy"],
+      "description": "Instrumentation for JSON-RPC services including method invocation tracking, batch request monitoring, and notification metrics."
+    },
+    {
+      "id": 1710,
+      "facet": "Protocol Buffers Serialization",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.85,
+        "completeness_score": 0.85
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["protobuf", "serialization", "rpc", "performance"],
+      "description": "Performance monitoring for Protocol Buffers serialization including message sizes, encoding/decoding latency, and schema evolution tracking."
     }
   ]
 }

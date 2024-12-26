@@ -1,0 +1,58 @@
+{
+    "id": 25,
+    "concept": "Application Platforms",
+    "description": "Observability for enterprise application platforms and PaaS offerings that provide comprehensive application lifecycle management, deployment, and operations capabilities.",
+    "dimensions": [
+      {
+        "id": 2501,
+        "facet": "Cloud Foundry Instrumentation",
+        "maturity_score": 0.85,
+        "maturity_score_details": {
+          "developer_experience_score": 0.85,
+          "documentation_score": 0.85,
+          "completeness_score": 0.85
+        },
+        "confidence_score": 0.8,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.8,
+          "sentiment_score": 0.8
+        },
+        "tags": ["cloud-foundry", "paas", "cf", "platform"],
+        "description": "Native OpenTelemetry support in Cloud Foundry components including application staging, routing, and service broker operations."
+      },
+      {
+        "id": 2502,
+        "facet": "OpenShift Platform Monitoring",
+        "maturity_score": 0.9,
+        "maturity_score_details": {
+          "developer_experience_score": 0.9,
+          "documentation_score": 0.9,
+          "completeness_score": 0.9
+        },
+        "confidence_score": 0.85,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.85,
+          "sentiment_score": 0.85
+        },
+        "tags": ["openshift", "kubernetes", "redhat", "enterprise"],
+        "description": "Comprehensive monitoring of OpenShift-specific components including builds, image streams, routes, and platform operators."
+      },
+      {
+        "id": 2506,
+        "facet": "Heroku Platform",
+        "maturity_score": 0.85,
+        "maturity_score_details": {
+          "developer_experience_score": 0.85,
+          "documentation_score": 0.85,
+          "completeness_score": 0.85
+        },
+        "confidence_score": 0.8,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.8,
+          "sentiment_score": 0.8
+        },
+        "tags": ["heroku", "paas", "buildpacks", "dynos"],
+        "description": "Monitoring Heroku platform components including dyno lifecycle, buildpack operations, and add-on integration metrics."
+      }
+    ]
+  }

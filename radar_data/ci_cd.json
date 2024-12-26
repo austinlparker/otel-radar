@@ -36,6 +36,108 @@
       },
       "tags": ["cd", "deployments", "traces", "devops"],
       "description": "Provides telemetry for deployments—trace rollout durations, analyze canary release performance, and correlate failures back to code changes."
+    },
+    {
+      "id": 1003,
+      "facet": "Container Build Observability",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["docker", "buildkit", "containers", "build-time"],
+      "description": "Native OpenTelemetry support in BuildKit and Docker buildx for monitoring container image build performance, layer caching, and build step timing."
+    },
+    {
+      "id": 1004,
+      "facet": "Artifact Repository Monitoring",
+      "maturity_score": 0.75,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.8,
+        "completeness_score": 0.75
+      },
+      "confidence_score": 0.7,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.7
+      },
+      "tags": ["artifacts", "registry", "harbor", "metrics"],
+      "description": "Integration with artifact repositories like Harbor to track artifact upload/download metrics, storage usage, and scan results."
+    },
+    {
+      "id": 1005,
+      "facet": "CI/CD Platform Integration",
+      "maturity_score": 0.82,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.85,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["jenkins", "gitlab", "github-actions", "platform"],
+      "description": "Direct integration with CI/CD platforms for capturing pipeline metrics, job execution traces, and resource utilization patterns."
+    },
+    {
+      "id": 1006,
+      "facet": "Feature Flag Deployment Tracking",
+      "maturity_score": 0.8,
+      "maturity_score_details": {
+        "developer_experience_score": 0.8,
+        "documentation_score": 0.8,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.75,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.7,
+        "sentiment_score": 0.8
+      },
+      "tags": ["feature-flags", "flipt", "openfeature", "progressive-delivery"],
+      "description": "Observability for feature flag systems like Flipt and OpenFeature, tracking flag evaluation performance and deployment impact."
+    },
+    {
+      "id": 1007,
+      "facet": "Security Policy Verification",
+      "maturity_score": 0.85,
+      "maturity_score_details": {
+        "developer_experience_score": 0.85,
+        "documentation_score": 0.9,
+        "completeness_score": 0.8
+      },
+      "confidence_score": 0.8,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.8,
+        "sentiment_score": 0.8
+      },
+      "tags": ["security", "policy", "kyverno", "opa"],
+      "description": "Integration with policy engines like Kyverno and OPA to monitor policy evaluations, violations, and security compliance in CI/CD workflows."
+    },
+    {
+      "id": 1008,
+      "facet": "Infrastructure as Code Monitoring",
+      "maturity_score": 0.7,
+      "maturity_score_details": {
+        "developer_experience_score": 0.7,
+        "documentation_score": 0.7,
+        "completeness_score": 0.7
+      },
+      "confidence_score": 0.65,
+      "confidence_score_breakdown": {
+        "real_world_score": 0.6,
+        "sentiment_score": 0.7
+      },
+      "tags": ["iac", "terraform", "pulumi", "infrastructure"],
+      "description": "Observability for infrastructure deployments, tracking provisioning times, drift detection, and configuration changes across environments."
     }
   ]
 }

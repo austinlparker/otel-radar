@@ -1,0 +1,75 @@
+{
+    "id": 24,
+    "concept": "Configuration Management",
+    "description": "Monitoring and observability for configuration management systems, tracking changes, validation, and distribution of configuration across distributed systems.",
+    "dimensions": [
+      {
+        "id": 2401,
+        "facet": "Configuration Store Monitoring",
+        "maturity_score": 0.85,
+        "maturity_score_details": {
+          "developer_experience_score": 0.85,
+          "documentation_score": 0.85,
+          "completeness_score": 0.85
+        },
+        "confidence_score": 0.8,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.8,
+          "sentiment_score": 0.8
+        },
+        "tags": ["etcd", "consul", "zookeeper", "config-store"],
+        "description": "Monitoring distributed configuration stores including read/write patterns, consensus health, and version conflicts."
+      },
+      {
+        "id": 2402,
+        "facet": "Configuration Change Events",
+        "maturity_score": 0.8,
+        "maturity_score_details": {
+          "developer_experience_score": 0.8,
+          "documentation_score": 0.8,
+          "completeness_score": 0.8
+        },
+        "confidence_score": 0.75,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.7,
+          "sentiment_score": 0.8
+        },
+        "tags": ["changes", "events", "auditing", "config"],
+        "description": "Tracking configuration change lifecycle including validation results, rollout progress, and rollback operations."
+      },
+      {
+        "id": 2403,
+        "facet": "Secret Management",
+        "maturity_score": 0.85,
+        "maturity_score_details": {
+          "developer_experience_score": 0.85,
+          "documentation_score": 0.85,
+          "completeness_score": 0.85
+        },
+        "confidence_score": 0.8,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.75,
+          "sentiment_score": 0.85
+        },
+        "tags": ["secrets", "vault", "security", "config"],
+        "description": "Observability for secret management systems including rotation events, access patterns, and lease management."
+      },
+      {
+        "id": 2404,
+        "facet": "Configuration Validation",
+        "maturity_score": 0.75,
+        "maturity_score_details": {
+          "developer_experience_score": 0.75,
+          "documentation_score": 0.75,
+          "completeness_score": 0.75
+        },
+        "confidence_score": 0.7,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.65,
+          "sentiment_score": 0.75
+        },
+        "tags": ["validation", "schema", "config", "quality"],
+        "description": "Monitoring configuration validation processes including schema compliance, syntax checking, and semantic validation results."
+      }
+    ]
+  }

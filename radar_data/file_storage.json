@@ -1,0 +1,75 @@
+{
+    "id": 22,
+    "concept": "File Storage Systems",
+    "description": "Monitoring and observability for distributed file storage systems, object stores, and file system operations across cloud and on-premise environments.",
+    "dimensions": [
+      {
+        "id": 2201,
+        "facet": "Object Storage Monitoring",
+        "maturity_score": 0.85,
+        "maturity_score_details": {
+          "developer_experience_score": 0.85,
+          "documentation_score": 0.85,
+          "completeness_score": 0.85
+        },
+        "confidence_score": 0.8,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.8,
+          "sentiment_score": 0.8
+        },
+        "tags": ["s3", "object-storage", "cloud", "storage"],
+        "description": "Comprehensive monitoring for object storage operations including upload/download latencies, bucket operations, and storage class transitions."
+      },
+      {
+        "id": 2202,
+        "facet": "NFS/SMB Share Telemetry",
+        "maturity_score": 0.75,
+        "maturity_score_details": {
+          "developer_experience_score": 0.7,
+          "documentation_score": 0.8,
+          "completeness_score": 0.75
+        },
+        "confidence_score": 0.7,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.65,
+          "sentiment_score": 0.75
+        },
+        "tags": ["nfs", "smb", "file-sharing", "network"],
+        "description": "Monitoring for network file systems including IOPS, throughput, lock contentions, and client access patterns."
+      },
+      {
+        "id": 2203,
+        "facet": "Block Storage Performance",
+        "maturity_score": 0.8,
+        "maturity_score_details": {
+          "developer_experience_score": 0.8,
+          "documentation_score": 0.8,
+          "completeness_score": 0.8
+        },
+        "confidence_score": 0.75,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.7,
+          "sentiment_score": 0.8
+        },
+        "tags": ["block-storage", "ebs", "volumes", "io"],
+        "description": "Tracking block storage performance including latency distributions, queue depths, and volume utilization patterns."
+      },
+      {
+        "id": 2204,
+        "facet": "File System Events",
+        "maturity_score": 0.7,
+        "maturity_score_details": {
+          "developer_experience_score": 0.7,
+          "documentation_score": 0.7,
+          "completeness_score": 0.7
+        },
+        "confidence_score": 0.65,
+        "confidence_score_breakdown": {
+          "real_world_score": 0.6,
+          "sentiment_score": 0.7
+        },
+        "tags": ["inotify", "fsevents", "monitoring", "changes"],
+        "description": "Monitoring file system events including file creation, modification, deletion, and permission changes across distributed systems."
+      }
+    ]
+  }
